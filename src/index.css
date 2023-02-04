@@ -1,13 +1,127 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+* {
+	box-sizing: border-box;
+}
+.App {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+button {
+	border: 0;
+	line-height: 45px;
+	padding: 0 30px;
+	margin: 0;
+}
+input {
+	height: 45px;
+	width: 100%;
+	border: 1px solid #ddd;
+	padding: 0 15px;
+}
+
+.BookCreate button {
+	cursor: pointer;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 15px;
+}
+.singleBook {
+	width: 200px;
+	height: 300px;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.bookLists {
+	margin-top: 30px;
+}
+.bookLists > div {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.singleBook h3 {
+	color: #fff;
+	text-transform: capitalize;
+	position: relative;
+	z-index: 10;
+}
+.flex {
+	display: flex;
+}
+.singleBook {
+	position: relative;
+}
+.singleBook::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.5);
+	content: "";
+}
+.singleBook .buttons {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.singleBook .flex {
+	justify-content: space-between;
+}
+.singleBook button img {
+	max-width: 100%;
+	width: 20px;
+}
+.singleBook .buttons {
+	padding-top: 5px;
+	background: rgba(255, 255, 255, 0.5);
+	z-index: 10;
+}
+.singleBook input:focus,
+.singleBook input {
+	text-align: center;
+	font-size: 16px;
+	border: 0;
+}
+
+.singleBook button {
+	border: 0;
+	margin: 1px;
+	background: transparent;
+	height: auto;
+	position: relative;
+	z-index: 10;
+	cursor: pointer;
+}
+.edit-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	/* height: calc(100% - 50px); */
+	background: rgba(255, 255, 255, 0.95);
+}
+.singleBook form button {
+	background: rgb(55, 188, 11);
+	color: #fff;
+	font-size: 16px;
+	padding: 0 15px;
 }
